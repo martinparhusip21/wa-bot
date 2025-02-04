@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WhatsApp Bot Status</title>
+    <!-- Import stylesheet -->
+    <link rel="stylesheet" href="/style.css" />   
+  </head>
+  <body>
+    <h1>WhatsApp Bot</h1>
+    <div>
+      <h2>Status: {{status}}</h2>
+      {{#if qr}}
+        <div>
+          <h3>Scan QR Code:</h3>
+          <img src="{{qr}}" alt="QR Code untuk autentikasi WhatsApp" />
+        </div>
+      {{else}}
+        <p>QR Code tidak tersedia. Bot mungkin sudah terautentikasi atau belum siap menghasilkan QR Code.</p>
+      {{/if}}
+    </div>
+  </body>
+</html>
